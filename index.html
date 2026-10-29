@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yashika Thakur - Digital Marketing Specialist in Chandigarh and Mohali. SEO, Google Ads, social media and content marketing.">
+  <meta name="theme-color" content="#218c7a">
+  <title>Yashika Thakur | Digital Marketing Specialist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --sea: #218c7a;
+      --deep: #173d37;
+      --muted: #526f69;
+      --mint: #f0f8f6;
+      --line: #d5e7e2;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { margin: 0; background: var(--white); color: var(--deep); font-family: Arial, sans-serif; }
+    a { text-decoration: none; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 3px solid #f3b562;
+      outline-offset: 3px;
+    }
+    nav { background: rgba(255,255,255,.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .brand { font-family: Georgia, serif; }
+    .sea { color: var(--sea); }
+    .muted { color: var(--muted); }
+    .section { padding: 90px 7%; }
+    .section-title { font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); margin: 10px 0 35px; }
+    .eyebrow { color: var(--sea); text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: bold; }
+    .hero {
+      min-height: 100vh; padding: 120px 7% 60px; display: grid;
+      grid-template-columns: 1.1fr .9fr; align-items: center; gap: 45px;
+      overflow: hidden; background: linear-gradient(120deg, #fff 55%, #e8f5f1);
+    }
+    .hero h1 { font-family: Georgia, serif; font-size: clamp(3.5rem, 7vw, 6.7rem); line-height: .95; letter-spacing: -3px; margin: 20px 0; }
+    .hero h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+    .hero-copy { max-width: 600px; line-height: 1.8; color: var(--muted); }
+    .btn { display: inline-block; padding: 14px 23px; border-radius: 30px; font-weight: bold; margin: 10px 8px 10px 0; transition: .2s; }
+    .btn-primary { background: var(--sea); color: white; }
+    .btn-primary:hover { background: var(--deep); }
+    .btn-outline { border: 1px solid var(--sea); color: var(--deep); }
+    .btn-outline:hover { background: var(--mint); }
+    .portrait-wrap { position: relative; display: flex; align-items: end; justify-content: center; min-height: 470px; }
+    .portrait-circle { position: absolute; width: min(100%, 450px); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(135deg, #218c7a, #b8e0d6); bottom: 25px; }
+    .portrait { position: relative; z-index: 1; display: block; width: 100%; max-width: 450px; max-height: 600px; height: auto; object-fit: contain; object-position: bottom; }
+    .portrait-note { position: absolute; z-index: 2; top: 12%; right: 0; font: italic 24px Georgia, serif; color: var(--deep); transform: rotate(-8deg); }
+    .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; border-top: 1px solid var(--line); margin-top: 35px; padding-top: 22px; }
+    .stat strong { color: var(--sea); font: bold 32px Georgia, serif; }
+    .stat p { font-size: 13px; color: var(--muted); }
+    .soft { background: var(--mint); }
+    .cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 26px; transition: .2s; }
+    .card:hover { transform: translateY(-4px); border-color: var(--sea); box-shadow: 0 10px 28px #173d3710; }
+    .card-icon { color: var(--sea); font-size: 27px; margin-bottom: 15px; }
+    .card h3 { margin: 10px 0; font-size: 19px; }
+    .card p, .body-copy { color: var(--muted); line-height: 1.8; }
+    .skill { margin: 24px 0; }
+    .skill-head { display: flex; justify-content: space-between; gap: 10px; }
+    .track { height: 9px; border-radius: 20px; background: #dcebe6; margin-top: 10px; overflow: hidden; }
+    .fill { height: 100%; background: var(--sea); border-radius: 20px; }
+    .timeline { border-left: 2px solid var(--line); padding-left: 25px; margin-left: 10px; }
+    .timeline-item { position: relative; margin: 30px 0; }
+    .timeline-item:before { content: ""; position: absolute; left: -33px; top: 5px; width: 13px; height: 13px; border-radius: 50%; background: var(--sea); }
+    .faq-item { border: 1px solid var(--line); border-radius: 12px; margin: 12px 0; overflow: hidden; }
+    .faq-btn { width: 100%; padding: 20px; background: white; border: 0; display: flex; justify-content: space-between; gap: 15px; text-align: left; font-size: 16px; font-weight: bold; color: var(--deep); cursor: pointer; }
+    .faq-answer { padding: 0 20px 20px; color: var(--muted); line-height: 1.7; }
+    .hidden { display: none; }
+    input, textarea { width: 100%; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--deep); font: inherit; margin-top: 8px; }
+    label { font-size: 14px; font-weight: bold; }
+    footer { text-align: center; color: var(--muted); }
+    footer a { color: var(--sea); margin: 0 10px; font-size: 20px; }
+    @media(max-width:767px) {
+      .mobile-menu { display: block; }
+      .mobile-menu[hidden] { display: none; }
+    }
+    @media(min-width:768px) { .mobile-menu, .menu-toggle { display: none; } }
+    @media(max-width:850px) {
+      .hero { grid-template-columns: 1fr; padding-top: 120px; }
+      .portrait-wrap { min-height: 400px; }
+      .portrait { max-height: 500px; }
+      .cards { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+    @media(max-width:560px) {
+      .section { padding: 65px 6%; }
+      .hero { padding-left: 6%; padding-right: 6%; }
+      .hero h1 { font-size: 3.6rem; }
+      .cards { grid-template-columns: 1fr; }
+      .stats { gap: 8px; }
+      .stat strong { font-size: 25px; }
+      .stat p { font-size: 11px; }
+      .portrait-wrap { min-height: 350px; }
+      .portrait-note { right: 0; font-size: 19px; }
+    }
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:z-[60] focus:bg-white focus:p-3">Skip to content</a>
+  <nav class="fixed top-0 left-0 w-full z-50" aria-label="Primary navigation">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="brand text-2xl font-bold" aria-label="Yashika Thakur home">Yashika <span class="sea">Thakur.</span></a>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#blogs">Blogs</a><a href="#contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="btn btn-primary !my-0 !px-4 !py-2 text-sm">Let's Talk</a>
+        <button class="menu-toggle md:hidden p-2 text-xl" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden border-t border-[var(--line)] px-6 py-3" hidden>
+      <div class="flex flex-col gap-3 text-sm font-medium">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#blogs">Blogs</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Hello, I'm Yashika</p>
+        <h1 id="hero-title">Yashika<br><span class="sea">Thakur.</span></h1>
+        <h2>Digital Marketing Specialist</h2>
+        <p class="text-xl italic muted brand">Chandigarh &amp; Mohali, India</p>
+        <p class="hero-copy">I help businesses grow online with thoughtful digital marketing, search engine optimization, paid advertising, social media management, and content that connects with the right audience.</p>
+        <a href="#contact" class="btn btn-primary">Claim Your Free Session <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i></a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+        <div class="stats" aria-label="Experience highlights">
+          <div class="stat"><strong>10+</strong><p>Projects &amp; practice work</p></div><div class="stat"><strong>15+</strong><p>Skills &amp; tools</p></div><img class="portrait" src="my-photo.png" alt="Yashika Thakur"><div class="stat"><strong>300+</strong><p>Learning hours</p></div>
+        </div>
+      </div>
+      <div class="portrait-wrap"><div class="portrait-circle" aria-hidden="true"></div><div class="portrait-note">Let's Grow<br>Together</div></div>
+    </section>
+
+    <section id="about" class="section soft">
+      <p class="eyebrow">Who I Am</p><h2 class="section-title">A little about me.</h2>
+      <div class="body-copy max-w-4xl"><p>I'm Yashika Thakur, a digital marketing learner and specialist based around Chandigarh and Mohali, originally from Chamba, Himachal Pradesh. My science background has helped me develop analytical thinking, research, and problem-solving skills.</p><p>I work on SEO, Google Ads, social media marketing, content writing, email marketing, and website optimization. I enjoy helping businesses build a clear online presence and connect with their audience.</p></div>
+    </section>
+
+    <section id="services" class="section"><p class="eyebrow">What I Do</p><h2 class="section-title">My Services</h2>
+      <div class="cards">
+        <article class="card"><i class="fa-solid fa-magnifying-glass-chart card-icon" aria-hidden="true"></i><h3>Search Engine Optimization</h3><p>Keyword research, on-page SEO, technical checks, content optimization, and organic visibility.</p></article>
+        <article class="card"><i class="fa-solid fa-bullhorn card-icon" aria-hidden="true"></i><h3>Google Ads &amp; SEM</h3><p>Search campaign planning, keyword targeting, ad copy, budget planning, and performance tracking.</p></article>
+        <article class="card"><i class="fa-solid fa-hashtag card-icon" aria-hidden="true"></i><h3>Social Media Management</h3><p>Content calendars, post ideas, captions, engagement, and consistent brand communication.</p></article>
+        <article class="card"><i class="fa-solid fa-pen-nib card-icon" aria-hidden="true"></i><h3>Content Marketing</h3><p>SEO-friendly blogs, website copy, creative ideas, and helpful content for target audiences.</p></article>
+        <article class="card"><i class="fa-solid fa-envelope card-icon" aria-hidden="true"></i><h3>Email Marketing</h3><p>Email campaigns, subject lines, audience segmentation, and simple nurture sequences.</p></article>
+        <article class="card"><i class="fa-solid fa-laptop card-icon" aria-hidden="true"></i><h3>Website Optimization</h3><p>Responsive website content, user experience improvements, and basic performance checks.</p></article>
+      </div>
+    </section>
+
+    <section id="skills" class="section soft"><p class="eyebrow">My Capabilities</p><h2 class="section-title">Skills &amp; Tools</h2>
+      <div class="grid md:grid-cols-2 gap-12"><div>
+        <div class="skill"><div class="skill-head"><span>SEO</span><strong class="sea">90%</strong></div><div class="track"><div class="fill" style="width:90%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Social Media Marketing</span><strong class="sea">88%</strong></div><div class="track"><div class="fill" style="width:88%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Google Ads</span><strong class="sea">82%</strong></div><div class="track"><div class="fill" style="width:82%"></div></div></div>
+        <div class="skill"><div class="skill-head"><span>Content &amp; Email Marketing</span><strong class="sea">85%</strong></div><div class="track"><div class="fill" style="width:85%"></div></div></div>
+      </div><div class="cards !grid-cols-2">
+        <div class="card"><i class="fa-brands fa-wordpress card-icon" aria-hidden="true"></i><h3>WordPress</h3></div><div class="card"><i class="fa-solid fa-chart-line card-icon" aria-hidden="true"></i><h3>Google Analytics</h3></div><div class="card"><i class="fa-solid fa-envelope card-icon" aria-hidden="true"></i><h3>Mailchimp</h3></div><div class="card"><i class="fa-solid fa-tag card-icon" aria-hidden="true"></i><h3>Google Tag Manager</h3></div><div class="card"><i class="fa-solid fa-magnifying-glass card-icon" aria-hidden="true"></i><h3>Google Search Console</h3></div><div class="card"><i class="fa-solid fa-robot card-icon" aria-hidden="true"></i><h3>AI Tools</h3></div>
+      </div></div>
+    </section>
+
+    <section id="journey" class="section"><p class="eyebrow">My Progress</p><h2 class="section-title">My Journey</h2><div class="timeline">
+      <div class="timeline-item"><h3>Academic Foundation</h3><p class="muted">Science studies and B.Sc. through IGNOU, building analytical and research skills.</p></div>
+      <div class="timeline-item"><h3>Digital Marketing Learning</h3><p class="muted">Learning SEO, paid ads, social media strategy, email marketing, and website basics.</p></div>
+      <div class="timeline-item"><h3>Practical Projects</h3><p class="muted">Developing campaign plans, brand strategies, content ideas, and portfolio projects.</p></div>
+      <div class="timeline-item"><h3>Freelance &amp; Client Outreach</h3><p class="muted">Exploring digital marketing opportunities for local businesses, cafes, hotels, and brands.</p></div>
+    </div></section>
+
+    <section id="faq" class="section soft"><p class="eyebrow">Questions &amp; Answers</p><h2 class="section-title">Frequently Asked Questions</h2><div class="max-w-4xl">
+      <div class="faq-item"><button class="faq-btn" type="button" aria-expanded="false">How can digital marketing help my business? <i class="fa-solid fa-chevron-down sea" aria-hidden="true"></i></button><div class="faq-answer hidden">Digital marketing helps your business reach the right people online through search engines, social media, useful content, and paid advertising.</div></div>
+      <div class="faq-item"><button class="faq-btn" type="button" aria-expanded="false">Why is local SEO important? <i class="fa-solid fa-chevron-down sea" aria-hidden="true"></i></button><div class="faq-answer hidden">Local SEO helps nearby customers find your business when they search for relevant products or services in their area.</div></div>
+      <div class="faq-item"><button class="faq-btn" type="button" aria-expanded="false">How long does SEO take? <i class="fa-solid fa-chevron-down sea" aria-hidden="true"></i></button><div class="faq-answer hidden">SEO is a long-term process. Results vary depending on competition, website quality, content, and consistency. Paid ads can bring traffic sooner.</div></div>
+    </div></section>
+
+    <section id="blogs" class="section"><p class="eyebrow">Ideas &amp; Insights</p><h2 class="section-title">Latest Marketing Blogs</h2><div class="cards">
+      <article class="card"><i class="fa-solid fa-chart-pie card-icon" aria-hidden="true"></i><p class="eyebrow">SEO &amp; Strategy</p><h3>Understanding Search Intent</h3><p>Learn how search intent helps you create content that answers users' questions and supports business goals.</p></article>
+      <article class="card"><i class="fa-solid fa-paper-plane card-icon" aria-hidden="true"></i><p class="eyebrow">Email Marketing</p><h3>Building Email Campaigns</h3><p>Explore simple ways to write subject lines, segment audiences, and build useful email sequences.</p></article>
+      <article class="card"><i class="fa-solid fa-bolt card-icon" aria-hidden="true"></i><p class="eyebrow">Website &amp; UX</p><h3>Improving Landing Pages</h3><p>Understand how clear messages, easy navigation, and fast pages can improve user experience.</p></article>
+    </div></section>
+
+    <section id="contact" class="section soft"><div class="max-w-3xl mx-auto"><p class="eyebrow text-center">Let's Connect</p><h2 class="section-title text-center">Your Vision Starts Here.</h2><p class="body-copy text-center mb-8">Tell me about your business or digital marketing goals.</p>
+      <form id="contact-form" class="card" novalidate><div class="grid md:grid-cols-2 gap-5">
+        <label for="first-name">First Name<input id="first-name" type="text" name="firstName" placeholder="Your first name" autocomplete="given-name" required></label>
+        <label for="last-name">Last Name<input id="last-name" type="text" name="lastName" placeholder="Your last name" autocomplete="family-name"></label>
+        <label for="email">Email Address<input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+        <label for="phone">Phone Number<input id="phone" type="tel" name="phone" placeholder="+91" autocomplete="tel"></label>
+      </div><label class="block mt-5" for="message">Your Message<textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea></label>
+      <button type="submit" class="btn btn-primary mt-5 border-0 cursor-pointer">Submit Message <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i></button>
+      <p id="form-note" class="muted text-sm mt-3" role="status">Demo form: connect a form service to receive messages.</p></form>
+    </div></section>
+  </main>
+
+  <footer class="py-10 px-6"><p>Chandigarh · Mohali · Himachal Pradesh, India</p><div class="my-5"><a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a><a href="https://github.com/" aria-label="GitHub" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a><a href="mailto:yashika@example.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></div><p>© 2026 Yashika Thakur. All rights reserved.</p></footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+      mobileMenu.hidden = isOpen;
+      mobileMenu.classList.toggle("hidden", isOpen);
+      menuToggle.querySelector("i").className = isOpen ? "fa-solid fa-bars" : "fa-solid fa-xmark";
+    });
+    document.querySelectorAll("#mobile-menu a").forEach((link) => link.addEventListener("click", () => menuToggle.click()));
+    document.querySelectorAll(".faq-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        const answer = button.nextElementSibling;
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!isOpen));
+        answer.classList.toggle("hidden", isOpen);
+        button.querySelector("i").classList.toggle("rotate-180", !isOpen);
+      });
+    });
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const note = document.getElementById("form-note");
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        note.textContent = "Please complete the required fields before submitting.";
+        return;
+      }
+      note.textContent = "Thank you! This demo form is not connected yet. Connect a form service to receive messages.";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
