@@ -131,11 +131,18 @@
         <a href="#contact" class="btn btn-primary">Claim Your Free Session <i class="fa-solid fa-arrow-right ml-2" aria-hidden="true"></i></a>
         <a href="#services" class="btn btn-outline">Explore Services</a>
         <div class="stats" aria-label="Experience highlights">
-          <div class="stat"><strong>10+</strong><p>Projects &amp; practice work</p></div><div class="stat"><strong>15+</strong><p>Skills &amp; tools</p><<div class="stat"><strong>300+</strong><p>Learning hours</p></div>
+          <div class="stat"><strong>10+</strong><p>Projects &amp; practice work</p></div><div class="stat"><strong>15+</strong><p>Skills &amp; tools</p><strong>300+</strong><p>Learning hours</p></div>
         </div>
       </div>
-      <div class="portrait-wrap">
-    <div class="portrait-circle" style="background-image: url('my-photo.png'); background-size: cover; background-position: center; border-radius: 50%; overflow: hidden;" aria-hidden="true"></div>
+      <div class="portrait-wrap" style="position: relative; width: 320px; height: 320px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+    
+    <!-- Green Circle Background -->
+    <div class="portrait-circle" aria-hidden="true" style="position: absolute; width: 260px; height: 260px; background-color: #2e7d32; border-radius: 50%; z-index: 1;"></div>
+    
+    <!-- Your Photo in Front -->
+    <img src="my-photo.jpeg" alt="Yashika Thakur" style="position: relative; width: 240px; height: 240px; border-radius: 50%; object-fit: cover; z-index: 2; border: 4px solid #ffffff; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+    
+    <!-- Let's Grow Together Badge -->
     <div class="portrait-note">Let's Grow <br> Together</div>
 </div>
 
